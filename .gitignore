@@ -1,0 +1,16 @@
+# Secrets (never commit these)
+.env
+.streamlit/secrets.toml
+
+# Runtime data
+showings.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+.vscode/

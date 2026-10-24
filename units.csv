@@ -1,0 +1,13 @@
+unit_id,address,city,bedrooms,bathrooms,rent,pet_friendly,available_date,status
+U101,12 Bow Rd NW #101,Calgary,1,1,1450,yes,2026-11-01,vacant
+U102,12 Bow Rd NW #102,Calgary,2,1,1850,no,2026-11-15,vacant
+U103,12 Bow Rd NW #103,Calgary,2,2,2050,yes,2026-12-01,vacant
+U201,48 Elbow Dr SW #201,Calgary,1,1,1500,no,2026-11-10,vacant
+U202,48 Elbow Dr SW #202,Calgary,3,2,2600,yes,2026-12-01,vacant
+U203,48 Elbow Dr SW #203,Calgary,2,1,1900,yes,,occupied
+U301,90 Jasper Ave #301,Edmonton,1,1,1250,yes,2026-11-05,vacant
+U302,90 Jasper Ave #302,Edmonton,2,1,1600,no,2026-11-20,vacant
+U303,90 Jasper Ave #303,Edmonton,2,2,1750,yes,,occupied
+U401,7 Whyte Ave #401,Edmonton,3,2,2100,yes,2026-12-01,vacant
+U402,7 Whyte Ave #402,Edmonton,1,1,1300,no,,occupied
+U403,7 Whyte Ave #403,Edmonton,2,1,1650,yes,2026-11-25,vacant
