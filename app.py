@@ -31,6 +31,10 @@ if not API_KEY:
     st.set_page_config(page_title="KO Leasing Bot", page_icon="🏡")
     st.error("GROQ_API_KEY is not set. Add it to your .env file locally, "
              "or to the app's Secrets on Streamlit Cloud.")
+    try:  # show only the NAMES of secrets found (never values) to help debugging
+        st.info(f"Secret names found: {list(st.secrets.keys()) or 'none'}")
+    except Exception:
+        st.info("No secrets found at all.")
     st.stop()
 
 client = Groq(api_key=API_KEY)
