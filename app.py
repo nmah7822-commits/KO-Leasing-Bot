@@ -14,7 +14,26 @@ from groq import Groq
 load_dotenv()
 UNITS_CSV = "units.csv"
 SHOWINGS_CSV = "showings.csv"
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+
+
+def get_api_key():
+    key = os.getenv("GROQ_API_KEY")
+    if key:
+        return key
+    try:  # Streamlit Cloud secrets
+        return st.secrets["GROQ_API_KEY"]
+    except Exception:
+        return None
+
+
+API_KEY = get_api_key()
+if not API_KEY:
+    st.set_page_config(page_title="KO Leasing Bot", page_icon="🏡")
+    st.error("GROQ_API_KEY is not set. Add it to your .env file locally, "
+             "or to the app's Secrets on Streamlit Cloud.")
+    st.stop()
+
+client = Groq(api_key=API_KEY)
 
 # Groq's model catalog changes often, so pick the first available model that
 # supports tool calling. Set GROQ_MODEL in .env to force a specific one.
